@@ -2,7 +2,7 @@ module.exports = class Subject {
     constructor(){
         this.observers = [];
     }
-    marrige() {
+    marry() {
         this.observers.forEach(observer => observer.doSth());
     }
 

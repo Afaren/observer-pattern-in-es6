@@ -18,10 +18,10 @@ let wanghao = new Subject();
 
 wanghao.register(new Observer(shasha_do_sth));
 wanghao.register(new Observer(xiaoxin_do_sth));
-wanghao.marrige();
+wanghao.marry();
 
 wanghao.register(new Observer(xiaohong_do_sth));
-wanghao.marrige();
+wanghao.marry();
 
 
 
