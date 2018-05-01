@@ -24,5 +24,15 @@ wanghao.register("marry", new Observer(xiaohong_do_sth));
 wanghao.publishEvent("marry");
 
 
+let shasha_for_have_first_child = () => console.log("喜得贵子_from_shasha");
 
+wanghao.register("have_child", new Observer(shasha_for_have_first_child));
+wanghao.publishEvent("have_child");
 
+let xiaoxin_for_have_second_child = () => console.log("喜得二子_from_xiaoxin");
+wanghao.register("have_child", new Observer(xiaoxin_for_have_second_child));
+wanghao.publishEvent("have_child");
+
+let xiaohong_for_have_second_child = () => console.log("喜得三子_from_xiaohong");
+wanghao.register("have_child", new Observer(xiaohong_for_have_second_child));
+wanghao.publishEvent("have_child");
