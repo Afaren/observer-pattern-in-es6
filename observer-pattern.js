@@ -1,25 +1,5 @@
-class Observer {
-    constructor(dosth){
-        this.doSth = dosth;
-    }
-    doSth() {
-        this.doSth();
-    }
-}
-
-
-class Subject {
-    constructor(){
-        this.observers = [];
-    }
-    marrige() {
-        this.observers.forEach(observer => observer.doSth());
-    }
-
-    register (observer){
-        this.observers.push(observer);
-    }
-}
+const Observer = require('./observer') ;
+const Subject = require('./subject') ;
 
 let shasha_dosth = () => {
     console.log('shasha恭喜你');
