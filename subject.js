@@ -1,12 +1,21 @@
 module.exports = class Subject {
-    constructor(){
+
+    constructor() {
         this.observers = [];
-    }
-    marry() {
-        this.observers.forEach(observer => observer.doSth());
+        this.eventObserverMap = {};
     }
 
-    register (observer){
-        this.observers.push(observer);
+    register(event, observer) {
+
+        if (!!this.eventObserverMap[event]) {
+            this.eventObserverMap[event].push(observer);
+        } else {
+            this.eventObserverMap[event] = [];
+            this.eventObserverMap[event].push(observer);
+        }
+    }
+
+    publishEvent(eventName) {
+        this.eventObserverMap[eventName].forEach(observer => observer.doSth());
     }
 }

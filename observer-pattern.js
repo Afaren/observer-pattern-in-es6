@@ -16,12 +16,12 @@ let xiaohong_do_sth = () => {
 
 let wanghao = new Subject();
 
-wanghao.register(new Observer(shasha_do_sth));
-wanghao.register(new Observer(xiaoxin_do_sth));
-wanghao.marry();
+wanghao.register("marry", new Observer(shasha_do_sth));
+wanghao.register("marry", new Observer(xiaoxin_do_sth));
+wanghao.publishEvent("marry");
 
-wanghao.register(new Observer(xiaohong_do_sth));
-wanghao.marry();
+wanghao.register("marry", new Observer(xiaohong_do_sth));
+wanghao.publishEvent("marry");
 
 
 
