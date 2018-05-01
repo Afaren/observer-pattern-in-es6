@@ -14,16 +14,13 @@ let xiaohong_do_sth = () => {
 }
 
 
-let shasha = new Observer(shasha_do_sth);
-let xiaoxin = new Observer(xiaoxin_do_sth);
 let wanghao = new Subject();
 
-wanghao.register(shasha);
-wanghao.register(xiaoxin);
+wanghao.register(new Observer(shasha_do_sth));
+wanghao.register(new Observer(xiaoxin_do_sth));
 wanghao.marrige();
 
-let xiaohong = new Observer(xiaohong_do_sth);
-wanghao.register(xiaohong);
+wanghao.register(new Observer(xiaohong_do_sth));
 wanghao.marrige();
 
 
