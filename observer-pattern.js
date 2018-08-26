@@ -29,3 +29,6 @@ wanghao.publishEvent("have_child");
 
 wanghao.register("have_child", new Observer(xiaohong_for_have_second_child));
 wanghao.publishEvent("have_child");
+
+
+wanghao.register("marry", new Observer(() => console.log("哎呀呀，这些天才听说您二位结婚了，恭喜恭喜呀")));
