@@ -12,7 +12,6 @@ module.exports = class Subject {
             this.eventObserverMap[event].push(observer);
         } else {
             this.eventObserverMap[event] = [];
-            this.history[event] = [];
             this.eventObserverMap[event].push(observer);
         }
         this.history.filter(h => h === event).forEach(observer.doSth);
